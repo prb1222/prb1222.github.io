@@ -17,14 +17,14 @@
 
 
 ::-moz-selection {
-    background: #f2c2c9;
-    color: #a4003a;
+    background: #c2e1f2;
+    color: #65c3ea;
     text-shadow: none;
 }
 
 ::selection {
-    background: #16a085;
-    color: #a4003a;
+    background: #1c98cd;
+    color: #65c3ea;
     text-shadow: none;
 }
 
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default .navbar-brand {
-	color: #1abc9c;
+	color: #1c98cd;
 }
 
 .navbar-default {
@@ -87,13 +87,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #1abc9c;
+	color: #22a8e1;
 	background-color: transparent;
-	border-bottom: 2px solid #1abc9c
+	border-bottom: 2px solid #22a8e1;
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #1abc9c;
+	color: #1c98cd;
 }
 
 /* ==========================================================================
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #social i:hover {
-	color: #1abc9c
+	color: #1c98cd
 }
 
 #footerwrap {
@@ -229,7 +229,6 @@ h1, h2, h3, h4, h5, h6 {
 	opacity: 0.4;
 }
 
-/*.gallery > a > img {
-  width: 100%;
-  display: block;
-}*/
+.header-text > h1, .header-text > h4{
+  text-shadow: 0px 0px 5px #1c98cd;
+}
