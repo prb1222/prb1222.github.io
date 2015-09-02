@@ -192,6 +192,10 @@ div.button-row > button {
   border-radius: 25px;
 }
 
+.button-row > * {
+  outline: none;
+}
+
 .button-row {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -229,6 +233,9 @@ button, input {
 .current-mode {
   display: inline-block;
   width: 100px;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 5px;
 }
 
 .current-mode-status {
@@ -251,4 +258,28 @@ button, input {
 
 p > a {
   display: inline-block;
+}
+
+.conway-button, .cyclic-button {
+  background-color: #ffa500;
+}
+
+.instructions-button {
+  background-color: #9ff;
+}
+
+.start-button {
+  background-color: #4f4;
+}
+
+.stop-button {
+  background-color: #ff4;
+}
+
+.step-button {
+  background-color: #44f;
+}
+
+.reset-button {
+  background-color: #f44;
 }
