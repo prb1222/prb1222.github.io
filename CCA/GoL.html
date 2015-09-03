@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <title>Conway's Game of Life</title>
     <link rel="stylesheet" type="text/css" href="./game.css">
+    <link rel="stylesheet" type="text/css" href="shepherd/stylesheets/shepherd-theme-arrows.css" />
+    <script src="./shepherd/javascripts/tether.js"></script>
+    <script src="./shepherd/javascripts/shepherd.js"></script>
   </head>
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
-
+    <script src="./shepherd-tour.js"></script>
     <script src='./menubar.js'></script>
     <script src='./game.js'></script>
     <script src='./game-view.js'></script>
@@ -25,6 +28,7 @@
             <button type="button" class="conway-button">Conway</button>
             <button type="button" class="cyclic-button">Cyclic</button>
             <button type="button" class="instructions-button">Instructions</button>
+            <button type="button" class="tour-button">Take Tour</button>
             <div class="current-mode-status">Current Mode: <div class="current-mode">Conway</div></div>
           </div>
           <div class="input-range-row">
@@ -56,8 +60,8 @@
                 Select Conway board:
               </div>
               <select id="conway-options" class="preset-dropdown" >
-                <option value="" selected>Blank Board</option>
-                <option value="gosper-gun">Gosper Glider Gun</option>
+                <option value="">Blank Board</option>
+                <option value="gosper-gun" selected>Gosper Glider Gun</option>
                 <option value="b52-gun">B25 Glider Gun</option>
                 <option value="acorn">Acorn</option>
                 <option value="garden-of-eden">Garden of Eden</option>
