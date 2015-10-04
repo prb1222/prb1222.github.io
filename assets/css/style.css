@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 #aboutwrap {
 	background: url(../img/rsz_space.jpg) no-repeat center top;
 	margin-top: -70px;
-	padding-top: 250px;
+	padding-top: 40px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
@@ -236,5 +236,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-me-container {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+#aboutwrap h1, #aboutwrap > div > div > div{
+  color: #ffffff;
+  text-shadow: 0px 0px 5px #1c98cd;
+}
+
+.portfolio-container {
+  margin-top: 40px;
 }

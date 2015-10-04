@@ -60,7 +60,7 @@
     $('#about-link').parent('li').addClass('active');
     $('html,body').animate(
       {
-        scrollTop: $("body").offset().top
+        scrollTop: $(".about-me-container").offset().top
       },
       {
         duration: 'slow',
