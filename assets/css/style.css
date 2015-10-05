@@ -200,6 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: url(../img/rsz_space.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 40px;
+  padding-bottom: 30px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
@@ -247,4 +248,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-container {
   margin-top: 40px;
+}
+
+div.gallery > img.img-responsive {
+  max-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
