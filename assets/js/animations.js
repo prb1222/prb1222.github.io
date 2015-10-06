@@ -11,6 +11,7 @@
     $('#works-link').click(this.scrollToWorks.bind(this));
     $('#home-link').click(this.scrollToHome.bind(this));
     $('#about-link').click(this.scrollToAbout.bind(this));
+    $('#skills-link').click(this.scrollToSkills.bind(this));
     $('#brand-link').click(this.scrollToHome.bind(this));
   };
 
@@ -42,6 +43,25 @@
     $('html,body').animate(
       {
         scrollTop: $("body").offset().top
+      },
+      {
+        duration: 'slow',
+        complete: function () {
+          this.scrolling = false;
+        }.bind(this)
+      }
+    );
+  };
+
+  AnimationController.prototype.scrollToSkills = function (event) {
+    event.preventDefault();
+    if (this.scrolling) {return;}
+    this.scrolling = true;
+    $('.active').removeClass('active');
+    $('#skills-link').parent('li').addClass('active');
+    $('html,body').animate(
+      {
+        scrollTop: $("#aboutwrap").offset().top
       },
       {
         duration: 'slow',
