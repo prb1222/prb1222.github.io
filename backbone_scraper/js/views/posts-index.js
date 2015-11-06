@@ -7,14 +7,10 @@ FlickrFeed.Views.PostsIndex = Backbone.View.extend({
   },
 
   render: function () {
-    var doc = document.documentElement;
-    // var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
     this.$el.html(this.template());
     this.collection.each(function(post){
       this.addPostItem(post);
     }.bind(this));
-    console.log(doc.height)
-    // window.resizeTo(710, $(window).width());
     return this;
   },
 

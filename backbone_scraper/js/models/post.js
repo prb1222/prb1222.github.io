@@ -1,6 +1,9 @@
 FlickrFeed.Models.Post = Backbone.Model.extend({
   collection: FlickrFeed.Collections.Posts,
 
+  defaults: {},
+
+
   parse: function (response) {
     var parsed_response = {};
 
@@ -44,5 +47,10 @@ FlickrFeed.Models.Post = Backbone.Model.extend({
     }
 
     return parsed_response;
+  },
+
+  parseTags: function () {
+    var tagsArray = this.get('tags').split(" ");
+    return tagsArray.map(function(tag){return "<a href='https://flickr.com/search?tags=" + tag + "'>" + tag + "</a>"}).join(" ");
   }
 });

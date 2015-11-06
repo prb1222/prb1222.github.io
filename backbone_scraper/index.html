@@ -38,15 +38,23 @@
   <script type="text/template" id="post-show-template">
     <div class="post-show-container">
       <div class="post-show-header">
-        <div class="post-title">
-          <%= post.get('title') %>
+        <div class="post-title-container">
+          <div class="post-title">
+            <a href="<%= post.get('image_url') %>"><%= post.get('title') %></a>
+          </div>
+          <div class="back-button-container">
+            <a href="#">Back</a>
+          </div>
         </div>
         <div class="sub-header-info">
           <div class="author-name">
             <a href="https://www.flickr.com/photos/<%= post.get('author_id')%>"><%= post.get('author') %></a>
           </div>
+          <div class="spacer">
+            |
+          </div>
           <div class="published-date">
-            | <%= post.get('published') %>
+            <%= post.get('published') %>
           </div>
         </div>
       </div>
@@ -59,7 +67,7 @@
             <%= post.get('description') %>
           </div>
           <div class="post-show-tags">
-            Tags: <%= post.get('tags') %>
+            Tags: <%= post.parseTags() %>
           </div>
         </div>
       </div>
