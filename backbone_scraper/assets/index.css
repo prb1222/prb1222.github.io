@@ -68,7 +68,7 @@ ul.index-feed {
 
 .hidden {
     position: absolute;
-    visibility: hidden;
+    display: none;
     font-size: 35px;
     height: auto;
     width: auto;
