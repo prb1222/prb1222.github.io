@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Backbone.js • FlickrFeed</title>
+  <link rel="stylesheet" href="assets/index.css">
+</head>
+<body>
+
+  <script type="text/template" id="feed-item-template">
+    <div class="index-item-container">
+      <div class="index-item-image">
+        <a href="#posts/<%= post.get('author_id') + '_' + post.get('rawDate') %>"><img src="<%= post.get('image_url') %>" alt="" /></a>
+      </div>
+      <div class="index-item-content">
+        <div class="index-item-title">
+          <a href="#posts/<%= post.get('author_id') + '_' + post.get('rawDate') %>"><span class="title-span">Content</span></a>
+        </div>
+        <div class="index-item-info-bar">
+          <div class="author-name">
+            <a href="https://www.flickr.com/photos/<%= post.get('author_id')%>"><%= post.get('author') %></a>
+          </div>
+          <div class="published-date">
+            <%= post.get('published') %>
+          </div>
+          <div class="view-on-flickr">
+            <a href="<%= post.get('link') %>">View on Flickr</a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden">
+        <%= post.get('title') %>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="post-show-template">
+    <div class="post-show-container">
+      <div class="post-show-header">
+        <div class="post-title">
+          <%= post.get('title') %>
+        </div>
+        <div class="sub-header-info">
+          <div class="author-name">
+            <a href="https://www.flickr.com/photos/<%= post.get('author_id')%>"><%= post.get('author') %></a>
+          </div>
+          <div class="published-date">
+            | <%= post.get('published') %>
+          </div>
+        </div>
+      </div>
+      <div class="post-show-content">
+        <div class="post-show-image">
+          <img src="<%= post.get('image_url') %>" alt="" />
+        </div>
+        <div class="post-show-text-container">
+          <div class="post-show-description">
+            <%= post.get('description') %>
+          </div>
+          <div class="post-show-tags">
+            Tags: <%= post.get('tags') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="index-template">
+    <div class="index-container">
+      <ul class="index-feed"></ul>
+    </div>
+  </script>
+
+  <script src="js/lib/jquery-2.1.4.min.js"></script>
+  <script src="js/lib/underscore-min.js"></script>
+  <script src="js/lib/backbone-min.js"></script>
+  <script src="js/lib/moment.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/models/post.js"></script>
+  <script src="js/collections/posts.js"></script>
+  <script src="js/views/posts-index.js"></script>
+  <script src="js/views/post-item.js"></script>
+  <script src="js/views/post-show.js"></script>
+  <script src="js/routers/router.js"></script>
+
+  <h3>Flickr Public Feed</h3>
+  <div id="content"></div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      FlickrFeed.initialize();
+    });
+  </script>
+</body>
+</html>
