@@ -258,4 +258,6 @@ div.gallery > img.img-responsive {
 
 .portfolio-container img {
   border: 2px solid #1c98cd;
+  height: 360px;
+  width: 240px;
 }
